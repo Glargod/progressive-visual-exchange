@@ -15,7 +15,7 @@ This is analogous to spoken turn-taking. The same pattern can, in principle, app
 ## White Paper
 Full concept, long-term motivation, open research directions, and limitations:
 
-📄 **[WHITEPAPER.md](WHITEPAPER.md)** (v0.2 — 13 October 2026)
+📄 **[WHITEPAPER.md](WHITEPAPER.md)** (v0.2.1 — 13 October 2026)
 
 ## Status
 Early conceptual stage. Immediately testable with current text-to-image and image-to-image models. Contributions, experiments, and discussion on continuity metrics, shared representations, evaluation protocols, and interface affordances are welcome.
@@ -25,4 +25,4 @@ Explores interaction design patterns for progressive perceptual exchange, distin
 
 ---
 
-*Created October 2026 • Updated 13 October 2026 (v0.2)*
+*Created October 2026 • Updated 13 October 2026 (v0.2.1)*
