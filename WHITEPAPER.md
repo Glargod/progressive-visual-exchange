@@ -1,5 +1,5 @@
 **White Paper: Progressive Visual Exchange as a Conversational Primitive**  
-**Version 0.2 — 13 October 2026**
+**Version 0.2.1 — 13 October 2026**
 
 **Abstract**  
 Current digital communication treats images primarily as static artifacts—objects to be captioned, commented on, or regenerated in isolation. This paper introduces *progressive visual exchange* (PVE): a mode of interaction in which successive representations function as conversational turns that advance, modify, or respond to a shared state rather than restating it. Images serve as the immediate, practical implementation and testbed. The underlying protocol is intended to be more general—an early exploration of progressive exchange of perceptual representations. The approach is immediately testable with existing generative tools and supplies a design grammar that may remain relevant for future higher-bandwidth or non-linguistic channels, including potential brain-computer or sensory interfaces, without depending on their existence.
@@ -8,7 +8,7 @@ Current digital communication treats images primarily as static artifacts—obje
 Text remains the dominant channel for precise, revisable communication because it is sequential, editable, and relatively low-bandwidth. Images convey dense spatial, textural, and affective information in a single frame, yet current interfaces rarely exploit this density for dialogue. Typical image replies either (a) describe the original in text, (b) generate a thematically similar but disconnected image, or (c) apply superficial edits that do not constitute a response. In all three cases the second image does not inherit and modify the first as a shared scene. The result is a series of isolated statements rather than a continuing exchange.
 
 **2. Concept: Progressive Visual Exchange**  
-A progressive visual exchange treats successive images as linked states of a shared scene. Upon receiving an image, the responding party generates a new image that:
+A progressive visual exchange treats successive images as conversational states within an evolving interaction. Each image preserves relevant context from prior turns while introducing a meaningful response or change. In the initial implementation, this context is represented through a shared visual scene; broader implementations may use other perceptual representations or structured intermediate states. Upon receiving an image, the responding party generates a new image that:
 - preserves recognizable continuity with the prior frame (setting, key objects, participants, lighting conditions);
 - introduces a clear next action, change of viewpoint, addition, or removal that addresses the content of the previous image;
 - remains interpretable as a reply rather than a parallel statement.
@@ -18,7 +18,7 @@ The mechanism is analogous to spoken turn-taking. Just as a verbal reply presupp
 Images are the first practical modality. The same interaction pattern can, in principle, apply to other perceptual representations.
 
 **3. Immediate Utility**  
-The pattern is implementable today with text-to-image and image-to-image models. It requires no new hardware. Early experiments demonstrate that participants can distinguish acknowledgment-style generations from progressive ones and prefer the latter for sustained exchange. Benefits include:
+The pattern is implementable today with text-to-image and image-to-image models. It requires no new hardware. Preliminary informal observations suggest that users can distinguish acknowledgment-style generations from progressive ones and may prefer the latter for sustained exchange. Controlled evaluation is needed to establish the reliability and extent of this effect. Benefits include:
 - higher information density per turn than text alone;
 - reduced need for lengthy verbal descriptions of spatial or emotional context;
 - a lightweight shared state that both parties can reference without re-uploading prior images.
@@ -26,7 +26,7 @@ The pattern is implementable today with text-to-image and image-to-image models.
 **4. Long-Term Motivation: Beyond Language-Based Interaction**  
 Progressive Visual Exchange is designed for immediate experimentation with existing generative tools, but its broader motivation is to explore interaction protocols that could remain useful as communication technologies evolve.
 
-If future brain-computer interfaces or other technologies enable increasingly direct exchange of sensory information, imagery, or perceptual representations, conventional text- and voice-centred conversational interfaces may become a limiting abstraction. In such a setting, an LLM (or other AI system) would need an interface capable of accepting and producing sensory or imagery-based messages rather than relying solely on language tokens.
+If future brain-computer interfaces or other technologies enable increasingly direct exchange of sensory information, imagery, or perceptual representations, conventional text- and voice-centred conversational interfaces may become a limiting abstraction. In such a setting, an LLM (or other AI system) would need an interface capable of accepting and producing sensory or imagery-based messages rather than relying solely on language tokens. Such an interface would require not only sensory input and output channels, but also representations and processing mechanisms capable of interpreting, transforming, and communicating the relevant information with measurable fidelity.
 
 PVE explores an alternative interaction pattern in which participants exchange successive representations that preserve relevant context while advancing a shared interaction. The initial implementation uses generated images as a practical testbed. The underlying principles may eventually extend to other sensory modalities and representations, although their applicability to future neural or direct perceptual communication systems remains speculative.
 
@@ -43,7 +43,7 @@ The following areas are open for concrete work:
 
 - **Continuity metrics.** Define measurable criteria (object persistence, viewpoint distance, lighting consistency, participant identity) that distinguish progressive replies from unrelated generations. Human preference studies can validate the metrics.
 - **Edit versus regenerate.** Compare full-image regeneration against localized editing or inpainting when producing a next state. Measure latency, coherence, and user control.
-- **Shared latent representations.** Investigate whether both parties can operate on a common intermediate representation (scene graph, neural latent, or explicit 3D proxy) rather than exchanging only final pixels. This would reduce redundant computation and improve consistency.
+- **Shared representations and state fidelity.** Investigate whether both parties can operate on a common intermediate representation (scene graph, neural latent, explicit 3D proxy, or other suitable perceptual representation) rather than exchanging only final pixels. Evaluate whether this improves consistency, reduces redundant computation, and preserves relevant information across successive turns.
 - **Turn signaling.** Establish lightweight conventions for indicating the intended type of move (continuation, contrast, zoom, time advance, metaphorical shift) without requiring accompanying text.
 - **Multi-party and asynchronous use.** Extend the pattern beyond two-person exchanges. Determine how branching, merging, or delayed replies affect coherence.
 - **Evaluation protocols.** Design repeatable tasks in which participants must achieve a joint goal (complete a story, resolve a spatial arrangement, convey a specific affect) using only progressive images. Compare success rate and subjective clarity against text-only and static-image baselines.
