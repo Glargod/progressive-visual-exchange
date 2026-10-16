@@ -1,0 +1,16 @@
+Here is language that could be added to the white paper to make the intended scope clearer without overclaiming feasibility.
+
+**Proposed addition to Section 4 (Long-Term Motivation)**
+
+The image-based implementation is a constrained testbed for a more general pattern: progressive exchange of perceptual or intentional representations between a biological nervous system and an artificial system. The target interaction is not unrestricted knowledge transfer or a full “mind meld.” It is a high-bandwidth, selective channel in which participants exchange successive, context-preserving representations of sensory content, spatial structure, or directed intent, while retaining the ability to accept, reject, modify, or redirect what is received.
+
+In this framing, “telepathy” refers only to the reduction or elimination of intermediate symbolic or motor stages (typing, speech, visual display) in favor of more direct mapping between neural activity and an artificial system’s internal representations. It does not require complete mutual access to memories, beliefs, or unfiltered internal states. The protocol constraints remain those already stated: representational fidelity of the relevant content, continuity across turns, intentional progression, and correctability. These constraints are what distinguish a usable exchange from raw data dumping or uncontrolled leakage.
+
+Images currently serve as a practical proxy because they are dense, human-interpretable perceptual representations that existing models can both generate and condition upon. The same interaction grammar—preserve relevant context, introduce a responsive change, allow correction—could apply to other substrates (neural latents, reconstructed sensory streams, structured intermediate states) if and when interfaces capable of exchanging them become available. The protocol itself does not depend on any particular neural technology existing; it only requires that whatever channel is used can support successive, revisable representations rather than one-shot transmission.
+
+**Proposed addition to Section 2 (Concept) or as a short new subsection**
+
+**Selective progressive exchange versus full state transfer.**  
+A progressive exchange does not attempt to transmit or receive the entire cognitive state of either participant. It transmits only those elements the sender elects to externalize in the current turn, under continuity constraints that make the contribution interpretable as a response rather than an independent statement. The receiving system (human or artificial) is not required to reconstruct the sender’s full knowledge; it is required only to preserve and advance the shared representational context that has been explicitly exchanged. This selectivity is both a safety property and a practical bandwidth property: the channel remains usable even if it is incomplete, noisy, or limited to particular modalities.
+
+These additions keep the paper’s existing caution (it does not assume telepathy is imminent) while making explicit that the long-term target is a controlled, turn-based neural-to-artificial channel rather than unrestricted mind reading, and that the image experiments are a stand-in for testing the interaction rules themselves.
